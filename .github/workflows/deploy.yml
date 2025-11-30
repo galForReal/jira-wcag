@@ -32,11 +32,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Angular CLI
-        run: npm install -g @angular/cli
-
       - name: Build Angular app
-        run: ng build --configuration production
+        run: ./node_modules/.bin/ng build --configuration production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
