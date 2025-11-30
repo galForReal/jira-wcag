@@ -1,0 +1,189 @@
+<div class="epic-viewer-container">
+  <mat-card class="header-card">
+    <mat-card-header>
+      <mat-card-title>Jira Epic Issue Viewer</mat-card-title>
+      <mat-card-subtitle>View all issues under a Jira Epic</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="input-section">
+        <mat-form-field appearance="outline" class="epic-input">
+          <mat-label>Epic URL or Key</mat-label>
+          <input
+            matInput
+            [(ngModel)]="epicInput"
+            placeholder="https://jira.tools.sap/browse/CXCDC-30694 or CXCDC-30694"
+            (keyup.enter)="onSubmit()"
+          />
+          <mat-icon matPrefix>link</mat-icon>
+        </mat-form-field>
+
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="onSubmit()"
+          [disabled]="loading"
+          class="submit-button"
+        >
+          <mat-icon>search</mat-icon>
+          Fetch Issues
+        </button>
+
+        <button
+          mat-raised-button
+          color="warn"
+          (click)="clearResults()"
+          [disabled]="loading || (!issues.length && !error)"
+          class="clear-button"
+        >
+          <mat-icon>clear</mat-icon>
+          Clear
+        </button>
+      </div>
+
+      <!-- Authentication Section -->
+      <div class="auth-section">
+        <button
+          mat-button
+          (click)="toggleCredentials()"
+          class="toggle-auth-button"
+        >
+          <mat-icon>{{ showCredentials ? 'expand_less' : 'expand_more' }}</mat-icon>
+          {{ showCredentials ? 'Hide' : 'Show' }} Authentication (Optional)
+        </button>
+
+        <div *ngIf="showCredentials" class="credentials-section">
+          <p class="auth-info">
+            <mat-icon>info</mat-icon>
+            <strong>Required:</strong> Enter your Personal Access Token. Go to your Jira Profile → Personal Access Tokens → Create token.
+          </p>
+
+          <div class="credentials-inputs">
+            <mat-form-field appearance="outline" class="credential-field">
+              <mat-label>Personal Access Token</mat-label>
+              <input
+                matInput
+                type="password"
+                [(ngModel)]="password"
+                placeholder="Paste your Personal Access Token here"
+                autocomplete="off"
+              />
+              <mat-icon matPrefix>vpn_key</mat-icon>
+            </mat-form-field>
+          </div>
+
+          <button
+            mat-raised-button
+            color="accent"
+            (click)="testConnection()"
+            [disabled]="loading || !password"
+            class="test-button"
+          >
+            <mat-icon>check_circle</mat-icon>
+            Test Connection
+          </button>
+
+          <p class="token-help">
+            <small>
+              <strong>How to create a token:</strong><br>
+              1. Go to <a href="https://jira.tools.sap" target="_blank">jira.tools.sap</a><br>
+              2. Click Profile → Personal Access Tokens<br>
+              3. Click "Create token" and copy it<br>
+              4. Paste it above and click "Test Connection"
+            </small>
+          </p>
+        </div>
+      </div>
+
+      <!-- Loading Spinner -->
+      <div *ngIf="loading" class="loading-container">
+        <mat-spinner diameter="50"></mat-spinner>
+        <p>Loading issues...</p>
+      </div>
+
+      <!-- Error Message -->
+      <div *ngIf="error" class="error-message">
+        <mat-icon>error</mat-icon>
+        <span>{{ error }}</span>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Issues Table -->
+  <mat-card *ngIf="issues.length > 0" class="table-card">
+    <mat-card-header>
+      <mat-card-title>Issues ({{ issues.length }})</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <div class="table-container">
+        <table mat-table [dataSource]="issues" class="issues-table">
+          <!-- Key Column -->
+          <ng-container matColumnDef="key">
+            <th mat-header-cell *matHeaderCellDef>Key</th>
+            <td mat-cell *matCellDef="let issue">
+              <a [href]="getIssueUrl(issue.key)" target="_blank" class="issue-link">
+                {{ issue.key }}
+                <mat-icon class="external-link-icon">open_in_new</mat-icon>
+              </a>
+            </td>
+          </ng-container>
+
+          <!-- Summary Column -->
+          <ng-container matColumnDef="summary">
+            <th mat-header-cell *matHeaderCellDef>Summary</th>
+            <td mat-cell *matCellDef="let issue" class="summary-cell">
+              {{ issue.summary }}
+            </td>
+          </ng-container>
+
+          <!-- Status Column -->
+          <ng-container matColumnDef="status">
+            <th mat-header-cell *matHeaderCellDef>Status</th>
+            <td mat-cell *matCellDef="let issue">
+              <span class="status-badge" [ngClass]="'status-' + issue.status.toLowerCase().replace(' ', '-')">
+                {{ issue.status }}
+              </span>
+            </td>
+          </ng-container>
+
+          <!-- Labels Column -->
+          <ng-container matColumnDef="labels">
+            <th mat-header-cell *matHeaderCellDef>Labels</th>
+            <td mat-cell *matCellDef="let issue">
+              <div class="labels-container">
+                <mat-chip-set *ngIf="issue.labels.length > 0">
+                  <mat-chip *ngFor="let label of issue.labels">
+                    {{ label }}
+                  </mat-chip>
+                </mat-chip-set>
+                <span *ngIf="issue.labels.length === 0" class="no-labels">No labels</span>
+              </div>
+            </td>
+          </ng-container>
+
+          <!-- Assignee Column -->
+          <ng-container matColumnDef="assignee">
+            <th mat-header-cell *matHeaderCellDef>Assignee</th>
+            <td mat-cell *matCellDef="let issue">
+              <span [ngClass]="{'unassigned': issue.assignee === 'Unassigned'}">
+                {{ issue.assignee }}
+              </span>
+            </td>
+          </ng-container>
+
+          <!-- Issue Type Column -->
+          <ng-container matColumnDef="issuetype">
+            <th mat-header-cell *matHeaderCellDef>Type</th>
+            <td mat-cell *matCellDef="let issue">
+              <span class="issue-type">{{ issue.issuetype }}</span>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

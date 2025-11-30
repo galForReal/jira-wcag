@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir:*)",
+      "Bash(ng version:*)",
+      "Bash(ng new:*)",
+      "Bash(ng add:*)",
+      "Bash(mkdir:*)",
+      "Bash(ng generate:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

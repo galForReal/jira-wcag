@@ -1,0 +1,213 @@
+<div class="analytics-container">
+  <h1>WCAG Compliance Analytics Dashboard</h1>
+
+  <!-- Overall Statistics Cards -->
+  <div class="stats-cards">
+    <mat-card class="stat-card">
+      <mat-card-header>
+        <mat-icon>assignment</mat-icon>
+        <mat-card-title>Total Issues</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ totalIssues }}</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card completed">
+      <mat-card-header>
+        <mat-icon>check_circle</mat-icon>
+        <mat-card-title>Completed/Cancelled</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ completedIssues }}</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card in-progress">
+      <mat-card-header>
+        <mat-icon>hourglass_empty</mat-icon>
+        <mat-card-title>In Progress</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ inProgressIssues }}</div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="stat-card completion">
+      <mat-card-header>
+        <mat-icon>trending_up</mat-icon>
+        <mat-card-title>Overall Completion</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="stat-value">{{ overallCompletionPercentage.toFixed(1) }}%</div>
+        <mat-progress-bar
+          mode="determinate"
+          [value]="overallCompletionPercentage"
+          [style.--progress-color]="getCompletionColor(overallCompletionPercentage)">
+        </mat-progress-bar>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Charts Section -->
+  <div class="charts-section">
+    <mat-card class="chart-card">
+      <mat-card-header>
+        <mat-card-title>Status Distribution</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="chart-container">
+          <canvas baseChart
+            [data]="pieChartData"
+            [type]="pieChartType"
+            [options]="pieChartOptions">
+          </canvas>
+        </div>
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="chart-card">
+      <mat-card-header>
+        <mat-card-title>Top 10 Standards by Issue Count</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div class="chart-container">
+          <canvas baseChart
+            [data]="barChartData"
+            [type]="barChartType"
+            [options]="barChartOptions">
+          </canvas>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Standards Statistics -->
+  <mat-card class="standards-stats">
+    <mat-card-header>
+      <mat-card-title>Standards Overview</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="standards-grid">
+        <div *ngFor="let stat of standardsStats" class="standard-item">
+          <div class="standard-header">
+            <h3>{{ stat.standard }}</h3>
+            <mat-chip [style.background-color]="getCompletionColor(stat.completionPercentage)">
+              {{ stat.completionPercentage.toFixed(0) }}% Complete
+            </mat-chip>
+          </div>
+          <div class="standard-details">
+            <div class="detail-row">
+              <span class="label">Total Items:</span>
+              <span class="value">{{ stat.totalItems }}</span>
+            </div>
+            <div class="status-breakdown">
+              <div *ngFor="let status of stat.statusCounts | keyvalue" class="status-item">
+                <mat-chip [style.background-color]="getStatusColor(status.key)">
+                  {{ status.key }}: {{ status.value }}
+                </mat-chip>
+              </div>
+            </div>
+            <button
+              mat-raised-button
+              color="primary"
+              (click)="filterByStandard(stat.standard)"
+              class="filter-btn">
+              View Issues
+            </button>
+          </div>
+          <mat-progress-bar
+            mode="determinate"
+            [value]="stat.completionPercentage"
+            [style.--progress-color]="getCompletionColor(stat.completionPercentage)">
+          </mat-progress-bar>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Filter Section -->
+  <mat-card class="filter-section">
+    <mat-card-header>
+      <mat-card-title>Filter Issues</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <mat-form-field appearance="fill" class="filter-field">
+        <mat-label>Select Standard</mat-label>
+        <mat-select [(value)]="selectedStandard" (selectionChange)="filterByStandard($event.value)">
+          <mat-option value="all">All Standards</mat-option>
+          <mat-option *ngFor="let standard of getAllStandards()" [value]="standard">
+            {{ standard }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="filter-info">
+        <mat-chip>Showing {{ filteredIssues.length }} of {{ totalIssues }} issues</mat-chip>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Issues Table -->
+  <mat-card class="issues-table">
+    <mat-card-header>
+      <mat-card-title>
+        Issues List
+        <span class="subtitle" *ngIf="selectedStandard !== 'all'">
+          ({{ selectedStandard }})
+        </span>
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <table mat-table [dataSource]="filteredIssues" class="full-width-table">
+        <!-- Issue Number Column -->
+        <ng-container matColumnDef="issue_number">
+          <th mat-header-cell *matHeaderCellDef>Issue Number</th>
+          <td mat-cell *matCellDef="let issue">{{ issue.issue_number }}</td>
+        </ng-container>
+
+        <!-- Standard Column -->
+        <ng-container matColumnDef="standard">
+          <th mat-header-cell *matHeaderCellDef>Standard</th>
+          <td mat-cell *matCellDef="let issue">
+            <mat-chip color="accent">{{ issue.standard }}</mat-chip>
+          </td>
+        </ng-container>
+
+        <!-- Title Column -->
+        <ng-container matColumnDef="title">
+          <th mat-header-cell *matHeaderCellDef>Title</th>
+          <td mat-cell *matCellDef="let issue" class="title-cell">{{ issue.title }}</td>
+        </ng-container>
+
+        <!-- Status Column -->
+        <ng-container matColumnDef="status">
+          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <td mat-cell *matCellDef="let issue">
+            <mat-chip [style.background-color]="getStatusColor(issue.status)">
+              {{ issue.status }}
+            </mat-chip>
+          </td>
+        </ng-container>
+
+        <!-- Link Column -->
+        <ng-container matColumnDef="link">
+          <th mat-header-cell *matHeaderCellDef>Jira Link</th>
+          <td mat-cell *matCellDef="let issue">
+            <a
+              [href]="getJiraLink(issue.issue_number)"
+              target="_blank"
+              mat-raised-button
+              color="primary"
+              class="jira-link">
+              <mat-icon>open_in_new</mat-icon>
+              View in Jira
+            </a>
+          </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,16 @@
+{
+  "/rest": {
+    "target": "https://jira.tools.sap",
+    "secure": false,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "cookieDomainRewrite": "localhost",
+    "cookiePathRewrite": "/",
+    "onProxyReq": function(proxyReq, req, res) {
+      console.log('Proxy request to:', proxyReq.path);
+    },
+    "onProxyRes": function(proxyRes, req, res) {
+      console.log('Proxy response status:', proxyRes.statusCode);
+    }
+  }
+}
