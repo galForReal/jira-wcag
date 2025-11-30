@@ -34,7 +34,6 @@
           },
           "configurations": {
             "production": {
-              "baseHref": "/jira-wcag/",
               "budgets": [
                 {
                   "type": "initial",
