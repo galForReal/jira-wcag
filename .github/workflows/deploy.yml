@@ -32,8 +32,13 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Verify installation
+        run: |
+          ls -la node_modules/.bin/ || echo "node_modules/.bin not found"
+          npm list @angular/cli
+
       - name: Build Angular app
-        run: ./node_modules/.bin/ng build --configuration production
+        run: npx --no-install ng build --configuration production
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
