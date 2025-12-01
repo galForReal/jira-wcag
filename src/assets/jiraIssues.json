@@ -54,12 +54,6 @@
     "status": "Development"
   },
   {
-    "issue_number": "CXCDC-36476",
-    "standard": "Update sirius",
-    "title": "Update sirius",
-    "status": "In Progress"
-  },
-  {
     "issue_number": "CXCDC-34421",
     "standard": "ACC-253.1",
     "title": "(Level A) _ Customer Data Cloud_ Input field _ No explicit label Provided for the UI.",
@@ -120,12 +114,6 @@
     "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-35149",
-    "standard": "Map all untranslated texts",
-    "title": "Map all untranslated texts",
-    "status": "Blocked / On Hold"
-  },
-  {
     "issue_number": "CXCDC-34360",
     "standard": "ACC-264.1",
     "title": "(Level A) _ Customer Data Cloud _Text_ In reading mode additional info is read.",
@@ -183,12 +171,6 @@
     "issue_number": "CXCDC-34407",
     "standard": "ACC-255.1",
     "title": "(Level A) _ Customer Data Cloud_ Icon _ No text alternative for non-text UI.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34745",
-    "standard": "Handle 'Not Accepted' items",
-    "title": "Handle 'Not Accepted' items",
     "status": "Done"
   },
   {
