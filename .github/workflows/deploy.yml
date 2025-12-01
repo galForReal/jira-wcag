@@ -41,7 +41,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: dist/jira-epic-viewer
+          path: dist/jira-epic-viewer/browser
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
