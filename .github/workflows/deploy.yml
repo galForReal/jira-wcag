@@ -17,19 +17,21 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: "npm"
+
+      - name: Use stable npm
+        run: npm install -g npm@9
+
+      - name: Install Angular CLI globally
+        run: npm install -g @angular/cli@18
 
       - name: Install dependencies
-        run: |
-          # Clear npm cache to prevent CI issues
-          npm cache clean --force
-          npm install --legacy-peer-deps
+        run: npm ci
         env:
           NODE_OPTIONS: --max-old-space-size=4096
 
       - name: Build Angular App
-        run: |
-          # Ensure Angular CLI is available
-          npx ng build --prod --base-href="/jira-wcag/"
+        run: ng build --prod --base-href="/jira-wcag/"
 
       - name: Deploy to GitHub Pages
         uses: actions/configure-pages@v4
