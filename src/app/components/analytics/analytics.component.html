@@ -142,7 +142,7 @@
         </mat-select>
       </mat-form-field>
       <div class="filter-info">
-        <mat-chip>Showing {{ filteredIssues.length }} of {{ totalIssues }} issues</mat-chip>
+        <mat-chip>Showing {{ dataSource.data.length }} of {{ totalIssues }} issues</mat-chip>
       </div>
     </mat-card-content>
   </mat-card>
@@ -158,16 +158,16 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <table mat-table [dataSource]="filteredIssues" class="full-width-table">
+      <table mat-table [dataSource]="dataSource" matSort class="full-width-table">
         <!-- Issue Number Column -->
         <ng-container matColumnDef="issue_number">
-          <th mat-header-cell *matHeaderCellDef>Issue Number</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Issue Number</th>
           <td mat-cell *matCellDef="let issue">{{ issue.issue_number }}</td>
         </ng-container>
 
         <!-- Standard Column -->
         <ng-container matColumnDef="standard">
-          <th mat-header-cell *matHeaderCellDef>Standard</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Standard</th>
           <td mat-cell *matCellDef="let issue">
             <mat-chip color="accent">{{ issue.standard }}</mat-chip>
           </td>
@@ -175,13 +175,13 @@
 
         <!-- Title Column -->
         <ng-container matColumnDef="title">
-          <th mat-header-cell *matHeaderCellDef>Title</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
           <td mat-cell *matCellDef="let issue" class="title-cell">{{ issue.title }}</td>
         </ng-container>
 
         <!-- Status Column -->
         <ng-container matColumnDef="status">
-          <th mat-header-cell *matHeaderCellDef>Status</th>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
           <td mat-cell *matCellDef="let issue">
             <mat-chip [style.background-color]="getStatusColor(issue.status)">
               {{ issue.status }}

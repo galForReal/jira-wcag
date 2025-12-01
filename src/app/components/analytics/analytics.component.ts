@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSortModule, MatSort } from '@angular/material/sort';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartType } from 'chart.js';
 import { WcagIssue, StandardStats } from '../../models/jira.models';
@@ -26,6 +27,7 @@ import { WcagIssue, StandardStats } from '../../models/jira.models';
     MatIconModule,
     MatProgressBarModule,
     MatButtonModule,
+    MatSortModule,
     BaseChartDirective
   ],
   templateUrl: './analytics.component.html',
@@ -35,7 +37,7 @@ export class AnalyticsComponent implements OnInit {
   issues: WcagIssue[] = [];
   standardsStats: StandardStats[] = [];
   selectedStandard: string = 'all';
-  filteredIssues: WcagIssue[] = [];
+  dataSource = new MatTableDataSource<WcagIssue>([]);
 
   // Overall statistics
   totalIssues = 0;
@@ -100,10 +102,16 @@ export class AnalyticsComponent implements OnInit {
 
   displayedColumns: string[] = ['issue_number', 'standard', 'title', 'status', 'link'];
 
+  @ViewChild(MatSort) sort!: MatSort;
+
   constructor(private http: HttpClient) {}
 
   ngOnInit() {
     this.loadIssues();
+  }
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
   }
 
   loadIssues() {
@@ -111,7 +119,7 @@ export class AnalyticsComponent implements OnInit {
       next: (data) => {
         this.issues = data;
         this.analyzeData();
-        this.filteredIssues = this.issues;
+        this.dataSource.data = this.issues;
         this.updateCharts();
       },
       error: (error) => {
@@ -208,9 +216,9 @@ export class AnalyticsComponent implements OnInit {
   filterByStandard(standard: string) {
     this.selectedStandard = standard;
     if (standard === 'all') {
-      this.filteredIssues = this.issues;
+      this.dataSource.data = this.issues;
     } else {
-      this.filteredIssues = this.issues.filter(issue => issue.standard === standard);
+      this.dataSource.data = this.issues.filter(issue => issue.standard === standard);
     }
   }
 

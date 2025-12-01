@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableModule, MatTableDataSource } from '@angular/material/table';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatCardModule } from '@angular/material/card';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSortModule, MatSort } from '@angular/material/sort';
 import { JiraService } from '../../services/jira.service';
 import { JiraIssue } from '../../models/jira.models';
 
@@ -23,7 +24,8 @@ import { JiraIssue } from '../../models/jira.models';
     MatProgressSpinnerModule,
     MatCardModule,
     MatChipsModule,
-    MatIconModule
+    MatIconModule,
+    MatSortModule
   ],
   templateUrl: './epic-viewer.component.html',
   styleUrl: './epic-viewer.component.css'
@@ -32,13 +34,19 @@ export class EpicViewerComponent {
   epicInput: string = '';
   username: string = '';
   password: string = '';
-  issues: JiraIssue[] = [];
+  dataSource = new MatTableDataSource<JiraIssue>([]);
   loading: boolean = false;
   error: string = '';
   showCredentials: boolean = false;
   displayedColumns: string[] = ['key', 'summary', 'status', 'labels', 'assignee', 'issuetype'];
 
+  @ViewChild(MatSort) sort!: MatSort;
+
   constructor(private jiraService: JiraService) {}
+
+  ngAfterViewInit() {
+    this.dataSource.sort = this.sort;
+  }
 
   onSubmit(): void {
     if (!this.epicInput.trim()) {
@@ -48,7 +56,7 @@ export class EpicViewerComponent {
 
     this.loading = true;
     this.error = '';
-    this.issues = [];
+    this.dataSource.data = [];
 
     // Set credentials if provided (only password/token is needed)
     if (this.password && this.password.trim()) {
@@ -64,7 +72,7 @@ export class EpicViewerComponent {
       this.jiraService.getIssuesByEpic(epicKey).subscribe({
         next: (issues) => {
           this.loading = false;
-          this.issues = issues;
+          this.dataSource.data = issues;
 
           if (issues.length === 0) {
             this.error = `No issues found for Epic: ${epicKey}`;
@@ -88,7 +96,7 @@ export class EpicViewerComponent {
 
   clearResults(): void {
     this.epicInput = '';
-    this.issues = [];
+    this.dataSource.data = [];
     this.error = '';
   }
 
