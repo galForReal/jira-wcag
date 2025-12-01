@@ -28,10 +28,13 @@ jobs:
         with:
           node-version: 18
 
+      # 🔥 Critical fix for the npm crash
       - name: Install dependencies
-        run: npm ci
-
-      # 👈 REMOVED the angular-cli install step
+        run: npm ci --legacy-peer-deps
+        env:
+          NODE_OPTIONS: "--no-experimental-fetch --max-old-space-size=4096"
+          NPM_CONFIG_WORKSPACE: "false"
+          NPM_CONFIG_ENGINE_STRICT: "false"
 
       - name: Build Angular app
         run: npm run build -- --base-href="/jira-wcag/"
@@ -42,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "./dist/jira-epic-viewer/browser"
+          path: './dist/jira-epic-viewer/browser'
 
   deploy:
     environment:
