@@ -38,6 +38,11 @@ jobs:
       - name: Build Angular App
         run: ng build --base-href="/jira-wcag/"
 
+      - name: Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist/jira-epic-viewer
+
       - name: Deploy to GitHub Pages
         uses: actions/configure-pages@v4
 
