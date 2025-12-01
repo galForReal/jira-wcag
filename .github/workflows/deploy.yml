@@ -44,4 +44,5 @@ jobs:
           path: dist/jira-epic-viewer
 
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2
+        run: |
+          npx gh-pages -d dist/jira-epic-viewer
