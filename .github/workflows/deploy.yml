@@ -33,7 +33,6 @@ jobs:
         run: npm ci --legacy-peer-deps
         env:
           NODE_OPTIONS: "--no-experimental-fetch --max-old-space-size=4096"
-          NPM_CONFIG_WORKSPACE: "false"
           NPM_CONFIG_ENGINE_STRICT: "false"
 
       - name: Build Angular app
