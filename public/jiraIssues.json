@@ -33,7 +33,7 @@
     "issue_number": "CXCDC-34367",
     "standard": "ACC-253.4",
     "title": "(Level A) _ Customer Data Cloud_ Input field _ Required info is read by the screen-reader but visually not indicated.",
-    "status": "Development"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34393",
