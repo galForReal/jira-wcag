@@ -9,13 +9,13 @@
     "issue_number": "CXCDC-34381",
     "standard": "ACC-271.1",
     "title": "(Level AA) _ Customer Data Cloud_ Button_ Focus gets overlaps with the button.",
-    "status": "Development"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34370",
     "standard": "ACC-275.1",
     "title": "(Level A) _ Customer Data Cloud_ Input field _Location of the element with the er",
-    "status": "Blocked / On Hold"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34384",
@@ -111,7 +111,7 @@
     "issue_number": "CXCDC-34408",
     "standard": "ACC-272.1",
     "title": "(Level A) _ Customer Data Cloud_ Button _ No correct Tab order.",
-    "status": "To Do"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34360",
@@ -123,7 +123,7 @@
     "issue_number": "CXCDC-34396",
     "standard": "ACC-264.1",
     "title": "(Level A) _ Customer Data Cloud_ Text _ Incorrect info is read.",
-    "status": "To Do"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34356",
@@ -177,7 +177,7 @@
     "issue_number": "CXCDC-34369",
     "standard": "ACC-263.1",
     "title": "(Level A) _[headers]Customer Data Cloud_ Button_ Group label not read.",
-    "status": "To Do"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34374",
@@ -195,7 +195,7 @@
     "issue_number": "CXCDC-34382",
     "standard": "ACC-263.3",
     "title": "(Level A) _ Customer Data Cloud_ Heading _ Incorrect heading level.",
-    "status": "To Do"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34383",
@@ -298,7 +298,7 @@
     "issue_number": "CXCDC-34397",
     "standard": "ACC-263.1",
     "title": "(Level A) _[headers]Customer Data Cloud_ Input field _ Group label not read.",
-    "status": "To Do"
+    "status": "Done"
   },
   {
     "issue_number": "CXCDC-34419",
@@ -340,7 +340,7 @@
     "issue_number": "CXCDC-34355",
     "standard": "ACC-262.4",
     "title": "(Level AAA) _ Customer Data Cloud_ Screen _Uis does not adapt to applied high contrast settings.",
-    "status": "To Do"
+    "status": "Cancelled"
   },
   {
     "issue_number": "CXCDC-34358",
@@ -364,7 +364,7 @@
     "issue_number": "CXCDC-34364",
     "standard": "ACC-283.4",
     "title": "(Level AA) _ Customer Data Cloud_ Text _ Text truncated on applying text spacing settings.",
-    "status": "To Do"
+    "status": "Cancelled"
   },
   {
     "issue_number": "CXCDC-34366",
@@ -400,6 +400,6 @@
     "issue_number": "CXCDC-34422",
     "standard": "ACC-253.4",
     "title": "(Level A) _ Customer Data Cloud_ Input field _ Read as required but visually not indicated.",
-    "status": "To Do"
+    "status": "Cancelled"
   }
 ]
