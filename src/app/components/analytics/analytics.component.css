@@ -193,10 +193,33 @@ h1 {
   margin-bottom: 30px;
 }
 
+.filter-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+}
+
 .filter-field {
   width: 100%;
   max-width: 400px;
-  margin-right: 20px;
+}
+
+.status-filter-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-label {
+  font-weight: 500;
+  color: #666;
+  margin-right: 8px;
+}
+
+.status-filter-buttons button {
+  min-width: 120px;
 }
 
 .filter-info {
@@ -288,8 +311,23 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .filter-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .filter-field {
     max-width: 100%;
+  }
+
+  .status-filter-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .status-filter-buttons button {
+    min-width: 100px;
+    flex: 1;
   }
 
   .title-cell {

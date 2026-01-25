@@ -132,15 +132,36 @@
       <mat-card-title>Filter Issues</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <mat-form-field appearance="fill" class="filter-field">
-        <mat-label>Select Standard</mat-label>
-        <mat-select [(value)]="selectedStandard" (selectionChange)="filterByStandard($event.value)">
-          <mat-option value="all">All Standards</mat-option>
-          <mat-option *ngFor="let standard of getAllStandards()" [value]="standard">
-            {{ standard }}
-          </mat-option>
-        </mat-select>
-      </mat-form-field>
+      <div class="filter-controls">
+        <mat-form-field appearance="fill" class="filter-field">
+          <mat-label>Select Standard</mat-label>
+          <mat-select [(value)]="selectedStandard" (selectionChange)="filterByStandard($event.value)">
+            <mat-option value="all">All Standards</mat-option>
+            <mat-option *ngFor="let standard of getAllStandards()" [value]="standard">
+              {{ standard }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="status-filter-buttons">
+          <span class="filter-label">Status:</span>
+          <button mat-raised-button
+            [color]="selectedStatusFilter === 'all' ? 'primary' : 'basic'"
+            (click)="filterByStatus('all')">
+            Show All
+          </button>
+          <button mat-raised-button
+            [color]="selectedStatusFilter === 'completed' ? 'primary' : 'basic'"
+            (click)="filterByStatus('completed')">
+            Completed
+          </button>
+          <button mat-raised-button
+            [color]="selectedStatusFilter === 'uncompleted' ? 'primary' : 'basic'"
+            (click)="filterByStatus('uncompleted')">
+            Uncompleted
+          </button>
+        </div>
+      </div>
       <div class="filter-info">
         <mat-chip>Showing {{ dataSource.data.length }} of {{ totalIssues }} issues</mat-chip>
       </div>

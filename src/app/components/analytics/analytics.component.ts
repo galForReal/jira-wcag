@@ -37,6 +37,7 @@ export class AnalyticsComponent implements OnInit {
   issues: WcagIssue[] = [];
   standardsStats: StandardStats[] = [];
   selectedStandard: string = 'all';
+  selectedStatusFilter: string = 'all';
   dataSource = new MatTableDataSource<WcagIssue>([]);
 
   // Overall statistics
@@ -215,11 +216,34 @@ export class AnalyticsComponent implements OnInit {
 
   filterByStandard(standard: string) {
     this.selectedStandard = standard;
-    if (standard === 'all') {
-      this.dataSource.data = this.issues;
-    } else {
-      this.dataSource.data = this.issues.filter(issue => issue.standard === standard);
+    this.applyFilters();
+  }
+
+  filterByStatus(statusFilter: string) {
+    this.selectedStatusFilter = statusFilter;
+    this.applyFilters();
+  }
+
+  applyFilters() {
+    let filtered = this.issues;
+
+    // Apply standard filter
+    if (this.selectedStandard !== 'all') {
+      filtered = filtered.filter(issue => issue.standard === this.selectedStandard);
     }
+
+    // Apply status filter
+    if (this.selectedStatusFilter === 'completed') {
+      filtered = filtered.filter(issue =>
+        issue.status === 'Done' || issue.status === 'Cancelled'
+      );
+    } else if (this.selectedStatusFilter === 'uncompleted') {
+      filtered = filtered.filter(issue =>
+        issue.status !== 'Done' && issue.status !== 'Cancelled'
+      );
+    }
+
+    this.dataSource.data = filtered;
   }
 
   getJiraLink(issueNumber: string): string {

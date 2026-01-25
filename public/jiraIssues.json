@@ -328,13 +328,13 @@
     "issue_number": "CXCDC-34411",
     "standard": "ACC-253.1",
     "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _ No Label Provided",
-    "status": "To Do"
+    "status": "Development"
   },
   {
     "issue_number": "CXCDC-34412",
     "standard": "ACC-253.4",
     "title": "(Level AA) [TFA-PhoneWidget]_ Customer Data Cloud_ Combo-box, Input field _ Read as required but visually not indicated.",
-    "status": "To Do"
+    "status": "Development"
   },
   {
     "issue_number": "CXCDC-34355",
@@ -376,13 +376,13 @@
     "issue_number": "CXCDC-34390",
     "standard": "ACC-253.4",
     "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box _ Required info is read by the screen-reader but visually not indicated.",
-    "status": "To Do"
+    "status": "Development"
   },
   {
     "issue_number": "CXCDC-34391",
     "standard": "ACC-253.1",
     "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _No Label Provided",
-    "status": "To Do"
+    "status": "Development"
   },
   {
     "issue_number": "CXCDC-34392",
