@@ -39,6 +39,7 @@ export class AnalyticsComponent implements OnInit {
   selectedStandard: string = 'all';
   selectedStatusFilter: string = 'all';
   dataSource = new MatTableDataSource<WcagIssue>([]);
+  consolidateStandards = false;
 
   // Overall statistics
   totalIssues = 0;
@@ -132,12 +133,15 @@ export class AnalyticsComponent implements OnInit {
   analyzeData() {
     const standardsMap = new Map<string, WcagIssue[]>();
 
-    // Group issues by standard
+    // Group issues by standard (optionally consolidating decimals)
     this.issues.forEach(issue => {
-      if (!standardsMap.has(issue.standard)) {
-        standardsMap.set(issue.standard, []);
+      const groupKey = this.consolidateStandards
+        ? issue.standard.replace(/\.\d+$/, '')  // ACC-253.1 → ACC-253
+        : issue.standard;
+      if (!standardsMap.has(groupKey)) {
+        standardsMap.set(groupKey, []);
       }
-      standardsMap.get(issue.standard)!.push(issue);
+      standardsMap.get(groupKey)!.push(issue);
     });
 
     // Calculate statistics for each standard
@@ -214,6 +218,14 @@ export class AnalyticsComponent implements OnInit {
     };
   }
 
+  toggleConsolidation() {
+    this.consolidateStandards = !this.consolidateStandards;
+    this.selectedStandard = 'all';  // Reset filter when toggling
+    this.analyzeData();
+    this.applyFilters();
+    this.updateCharts();
+  }
+
   filterByStandard(standard: string) {
     this.selectedStandard = standard;
     this.applyFilters();
@@ -229,7 +241,14 @@ export class AnalyticsComponent implements OnInit {
 
     // Apply standard filter
     if (this.selectedStandard !== 'all') {
-      filtered = filtered.filter(issue => issue.standard === this.selectedStandard);
+      if (this.consolidateStandards) {
+        // In consolidated mode, match the base standard (e.g., ACC-253 matches ACC-253.1, ACC-253.4)
+        filtered = filtered.filter(issue =>
+          issue.standard.replace(/\.\d+$/, '') === this.selectedStandard
+        );
+      } else {
+        filtered = filtered.filter(issue => issue.standard === this.selectedStandard);
+      }
     }
 
     // Apply status filter

@@ -86,6 +86,13 @@
   <mat-card class="standards-stats">
     <mat-card-header>
       <mat-card-title>Standards Overview</mat-card-title>
+      <button mat-raised-button
+        color="accent"
+        (click)="toggleConsolidation()"
+        class="consolidate-btn">
+        <mat-icon>{{ consolidateStandards ? 'unfold_more' : 'unfold_less' }}</mat-icon>
+        {{ consolidateStandards ? 'Show Full Standards' : 'Consolidate Standards' }}
+      </button>
     </mat-card-header>
     <mat-card-content>
       <div class="standards-grid">
