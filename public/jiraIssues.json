@@ -322,7 +322,7 @@
     "issue_number": "CXCDC-34413",
     "standard": "ACC-263.1",
     "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box _ Group label not read.",
-    "status": "To Do"
+    "status": "Development"
   },
   {
     "issue_number": "CXCDC-34411",
@@ -352,7 +352,7 @@
     "issue_number": "CXCDC-34362",
     "standard": "ACC-264.1",
     "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Input field, Combo-box _ Error message not read.",
-    "status": "To Do"
+    "status": "Development"
   },
   {
     "issue_number": "CXCDC-34363",
