@@ -1,0 +1,188 @@
+[
+  {
+    "issue_number": "CXCDC-34355",
+    "standard": "ACC-262.4",
+    "title": "(Level AAA) _ Customer Data Cloud_ Screen _Uis does not adapt to applied high contrast settings.",
+    "status": "Cancelled"
+  },
+  {
+    "issue_number": "CXCDC-34358",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _ Customer Data Cloud_ List-items _ Value count not read.",
+    "status": "Blocked / On hold"
+  },
+  {
+    "issue_number": "CXCDC-34360",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _ Customer Data Cloud _Text_ In reading mode additional info is read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-34362",
+    "standard": "ACC-264.1",
+    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Input field, Combo-box _ Error message not read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34363",
+    "standard": "ACC-275.1",
+    "title": "(Level AA)[TFA-PhoneWidget] Customer Data Cloud_ Combo-box _ focus is not shifting to the first error detected field.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34364",
+    "standard": "ACC-283.4",
+    "title": "(Level AA) _ [TFA-PhoneWidget]Customer Data Cloud_ Text _ Text truncated on applying text spacing settings.",
+    "status": "Cancelled"
+  },
+  {
+    "issue_number": "CXCDC-34365",
+    "standard": "ACC-264.1",
+    "title": "(Level A)[TFA-Screen]Customer Data Cloud_ Link _ Incorrect UI is read out.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-34366",
+    "standard": "ACC-275.1",
+    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Input field _ focus is not shifting to the error detected field.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34369",
+    "standard": "ACC-263.1",
+    "title": "(Level A) _[headers]Customer Data Cloud_ Button_ Group label not read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34370",
+    "standard": "ACC-275.1",
+    "title": "(Level A) _ Customer Data Cloud_ Input field _Location of the element with the error is not indicated.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34375",
+    "standard": "ACC-271.1",
+    "title": "(Level AA) _ Customer Data Cloud_ Button _ Dual focus is added for the button.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34382",
+    "standard": "ACC-263.3",
+    "title": "(Level A) _ Customer Data Cloud_ Heading _ Incorrect heading level.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34383",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _ Customer Data Cloud_ Link _Incorrect UI Type read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34387",
+    "standard": "ACC-263.1",
+    "title": "(Level A) _[headers]Customer Data Cloud_ Button, Input field_ Region name not read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34390",
+    "standard": "ACC-253.4",
+    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box _ Required info is read by the screen-reader but visually not indicated.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34391",
+    "standard": "ACC-253.1",
+    "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _No Label Provided for the UI.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34392",
+    "standard": "ACC-275.3",
+    "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _Application does provide appropriate correction suggestions.",
+    "status": "Development"
+  },
+  {
+    "issue_number": "CXCDC-34396",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _ Customer Data Cloud_ Text _ Incorrect info is read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34397",
+    "standard": "ACC-263.1",
+    "title": "(Level A) _[headers]Customer Data Cloud_ Input field _ Group label not read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34400",
+    "standard": "ACC-275.1",
+    "title": "(Level A) [TFA-PhoneWidget]Customer Data Cloud_ Input-field _Location of the element with the error is not indicated.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34408",
+    "standard": "ACC-272.1",
+    "title": "(Level A) _ Customer Data Cloud_ Button _ No correct Tab order.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34411",
+    "standard": "ACC-253.1",
+    "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _ No Label Provided for the UIs.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34412",
+    "standard": "ACC-253.4",
+    "title": "(Level AA) [TFA_PhoneWidget]_ Customer Data Cloud_ Combo-box, Input field _ Read as required but visually not indicated.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34413",
+    "standard": "ACC-263.1",
+    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box _ Group label not read.",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34422",
+    "standard": "ACC-253.4",
+    "title": "(Level A) _ Customer Data Cloud_ Input field _ Read as required but visually not indicated.",
+    "status": "Cancelled"
+  },
+  {
+    "issue_number": "CXCDC-34910",
+    "standard": "",
+    "title": "default registration login -> 'forgot password - email sent' screen : wcag generic issue",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-34918",
+    "standard": "",
+    "title": "default registration login -> gigya-mobile-forgot-password-verification-screen'",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-37273",
+    "standard": "",
+    "title": "Align bugs into sprints",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-37703",
+    "standard": "",
+    "title": "Integrate the new phone widget in LoginIDWidget and TFAWidget",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-37785",
+    "standard": "",
+    "title": "WCAG Focus first element on widgets",
+    "status": "Done"
+  },
+  {
+    "issue_number": "CXCDC-39771",
+    "standard": "",
+    "title": "Design New TFA",
+    "status": "To Do"
+  }
+]

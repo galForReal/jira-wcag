@@ -7,9 +7,23 @@
       "Bash(ng add:*)",
       "Bash(mkdir:*)",
       "Bash(ng generate:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(docker run:*)",
+      "WebFetch(domain:github.com)",
+      "Bash(powershell.exe -Command \"Get-ChildItem -Path \\\\$env:APPDATA -Filter 'claude_desktop_config.json' -Recurse -ErrorAction SilentlyContinue | Select-Object FullName\" 2>&1)",
+      "Bash(claude --version)",
+      "Bash(node:*)",
+      "Bash(printf '%s\\\\n' '{\"\"\"\"jsonrpc\"\"\"\":\"\"\"\"2.0\"\"\"\",\"\"\"\"id\"\"\"\":1,\"\"\"\"method\"\"\"\":\"\"\"\"initialize\"\"\"\",\"\"\"\"params\"\"\"\":{\"\"\"\"protocolVersion\"\"\"\":\"\"\"\"2024-11-05\"\"\"\",\"\"\"\"capabilities\"\"\"\":{},\"\"\"\"clientInfo\"\"\"\":{\"\"\"\"name\"\"\"\":\"\"\"\"test\"\"\"\",\"\"\"\"version\"\"\"\":\"\"\"\"1.0\"\"\"\"}}}')",
+      "Bash(timeout 15 npx -y \"git+https://github.tools.sap/sfsfmcp/sap-auth-mcp.git\")",
+      "Bash(echo \"EXIT:$?\")",
+      "mcp__cdc-jira__get_issue",
+      "mcp__cdc-jira__search_issues"
     ],
     "deny": [],
     "ask": []
-  }
+  },
+  "enabledMcpjsonServers": [
+    "sap-auth",
+    "cdc-jira"
+  ]
 }

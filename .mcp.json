@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "sap-auth": {
+      "command": "node",
+      "args": ["C:\\SapDevelop\\sap-auth-mcp\\dist\\index.js"],
+      "env": { "SAP_AUTH_ACCOUNT": "gal.cohen@sap.com" }
+    },
+    "cdc-jira": {
+      "command": "node",
+      "args": ["C:\\SapDevelop\\cdc-jira-mcp\\dist\\index.js", "--stdio"],
+      "env": { "JIRA_DOMAIN": "jira.tools.sap", "AUTH_COOKIE_DIR": "~/.sap-mcp/cookies/cdc-jira" }
+    }
+  }
+}
