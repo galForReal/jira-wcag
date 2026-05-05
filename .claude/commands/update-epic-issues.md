@@ -1,6 +1,6 @@
 # Update Epic Issues JSON
 
-Fetch all issues from a Jira epic and write them to a JSON file.
+Fetch all issues from a Jira epic and write them to a JSON file. Run this **once** to bootstrap the JSON — use `/sync-issue-statuses` for ongoing status updates.
 
 ## Usage
 `/update-epic-issues <EPIC_KEY> [OUTPUT_FILE]`
@@ -16,13 +16,15 @@ Fetch all issues from a Jira epic and write them to a JSON file.
    ```
    project = CXCDC AND "Epic Link" = <EPIC_KEY> ORDER BY created ASC
    ```
-   Request fields: `summary`, `status`, `labels`, `issuetype`. Use `maxResults: 100`.
+   Request fields: `summary`, `status`, `labels`, `issuetype`, `story_points`, `customfield_10016`. Use `maxResults: 100`.
 
 3. **For each issue**, build a JSON entry:
    - `issue_number` — the issue key (e.g. `CXCDC-34387`)
    - `standard` — the first label matching the pattern `ACC-\d+\.\d+` (e.g. `ACC-263.1`). If no such label exists, set to `"N/A"`
    - `title` — the issue summary with the leading `ACC-XXX.X ` prefix removed (if present)
    - `status` — the current Jira status (e.g. `Done`, `To Do`, `Development`, `Cancelled`)
+   - `epic` — the `EPIC_KEY` argument passed to this skill
+   - `effort` — story points from `story_points` or `customfield_10016`; default to `0` if not set
 
    If an issue has no labels at all, call `get_issue` with `fields: ["labels"]` to retrieve them explicitly.
 
