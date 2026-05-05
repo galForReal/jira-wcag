@@ -1,188 +1,344 @@
 [
   {
-    "issue_number": "CXCDC-34355",
-    "standard": "ACC-262.4",
-    "title": "(Level AAA) _ Customer Data Cloud_ Screen _Uis does not adapt to applied high contrast settings.",
-    "status": "Cancelled"
-  },
-  {
-    "issue_number": "CXCDC-34358",
-    "standard": "ACC-264.1",
-    "title": "(Level A) _ Customer Data Cloud_ List-items _ Value count not read.",
-    "status": "Blocked / On hold"
-  },
-  {
-    "issue_number": "CXCDC-34360",
-    "standard": "ACC-264.1",
-    "title": "(Level A) _ Customer Data Cloud _Text_ In reading mode additional info is read.",
+    "issue_number": "CXCDC-40637",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Button _ No text alternative for non-text UI.",
     "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34362",
-    "standard": "ACC-264.1",
-    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Input field, Combo-box _ Error message not read.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34363",
-    "standard": "ACC-275.1",
-    "title": "(Level AA)[TFA-PhoneWidget] Customer Data Cloud_ Combo-box _ focus is not shifting to the first error detected field.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34364",
-    "standard": "ACC-283.4",
-    "title": "(Level AA) _ [TFA-PhoneWidget]Customer Data Cloud_ Text _ Text truncated on applying text spacing settings.",
-    "status": "Cancelled"
-  },
-  {
-    "issue_number": "CXCDC-34365",
-    "standard": "ACC-264.1",
-    "title": "(Level A)[TFA-Screen]Customer Data Cloud_ Link _ Incorrect UI is read out.",
-    "status": "To Do"
-  },
-  {
-    "issue_number": "CXCDC-34366",
-    "standard": "ACC-275.1",
-    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Input field _ focus is not shifting to the error detected field.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34369",
-    "standard": "ACC-263.1",
-    "title": "(Level A) _[headers]Customer Data Cloud_ Button_ Group label not read.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34370",
-    "standard": "ACC-275.1",
-    "title": "(Level A) _ Customer Data Cloud_ Input field _Location of the element with the error is not indicated.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34375",
+    "issue_number": "CXCDC-40676",
     "standard": "ACC-271.1",
-    "title": "(Level AA) _ Customer Data Cloud_ Button _ Dual focus is added for the button.",
-    "status": "Done"
+    "title": "(Level AA)_Customer Data Cloud_ Link _ Visible focus is provided for the non-interactive text.",
+    "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34382",
+    "issue_number": "CXCDC-40677",
+    "standard": "ACC-270.6",
+    "title": "(Level A)_Customer Data Cloud_ Button _UI cannot be activated with keyboard.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40678",
+    "standard": "ACC-271.1",
+    "title": "(Level AA)_Customer Data Cloud_ Link _ No visible focus.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40694",
+    "standard": "ACC-271.1",
+    "title": "(Level AAA)_Customer Data Cloud_ Check-box_ Focus is added twice for the check-boxes.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40695",
+    "standard": "ACC-282.1",
+    "title": "(Level AA)_Customer Data Cloud_ Button, Link_ Truncated at 320.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40696",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field_ Required info read twice.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40697",
+    "standard": "ACC-261.1",
+    "title": "(Level AA)_Customer Data Cloud_ Text_ In default theme, text does not meet the contrast ratio of 4.5:1.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40698",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Icon_ No text alternative for the icon.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40699",
+    "standard": "ACC-262.4",
+    "title": "(Level AAA)_Customer Data Cloud_ Screen_ Screen is not adapting to High contrast and white theme.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40700",
+    "standard": "ACC-256.1",
+    "title": "(Level A) _ Customer Data Cloud_ Input-field _required is visually indicated using a black colour asterisk (*) symbol.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40701",
     "standard": "ACC-263.3",
-    "title": "(Level A) _ Customer Data Cloud_ Heading _ Incorrect heading level.",
-    "status": "Done"
+    "title": "(Level A)_Customer Data Cloud_ Heading_ Incorrect levels are assigned for the headings.",
+    "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34383",
+    "issue_number": "CXCDC-40702",
     "standard": "ACC-264.1",
-    "title": "(Level A) _ Customer Data Cloud_ Link _Incorrect UI Type read.",
-    "status": "Done"
+    "title": "(Level A)_Customer Data Cloud_ List-item_ List count not read.",
+    "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34387",
-    "standard": "ACC-263.1",
-    "title": "(Level A) _[headers]Customer Data Cloud_ Button, Input field_ Region name not read.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34390",
-    "standard": "ACC-253.4",
-    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box _ Required info is read by the screen-reader but visually not indicated.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34391",
+    "issue_number": "CXCDC-40703",
     "standard": "ACC-253.1",
-    "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _No Label Provided for the UI.",
-    "status": "Done"
+    "title": "(Level AA)_Customer Data Cloud_ Input field_ Year dropdown shows blank, unlabeled first option.",
+    "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34392",
-    "standard": "ACC-275.3",
-    "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _Application does provide appropriate correction suggestions.",
-    "status": "Development"
+    "issue_number": "CXCDC-40704",
+    "standard": "ACC-271.1",
+    "title": "(Level AA)_Customer Data Cloud_ Check-box_ the Focus indicator becomes barely visible when the checkbox is in the 'Checked' state.",
+    "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34396",
-    "standard": "ACC-264.1",
-    "title": "(Level A) _ Customer Data Cloud_ Text _ Incorrect info is read.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34397",
+    "issue_number": "CXCDC-40705",
     "standard": "ACC-263.1",
-    "title": "(Level A) _[headers]Customer Data Cloud_ Input field _ Group label not read.",
-    "status": "Done"
+    "title": "(Level A)_Customer Data Cloud_ Combo-box_ Group label not read and additional info is read.",
+    "status": "To Do"
   },
   {
-    "issue_number": "CXCDC-34400",
+    "issue_number": "CXCDC-40706",
+    "standard": "ACC-273.2",
+    "title": "(Level A)_Customer Data Cloud_ Button _ Focus moves away.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40707",
+    "standard": "ACC-263.1",
+    "title": "(Level A)_Customer Data Cloud_ Button _ Group label and Label not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40708",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field_ Required info is read as star.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40709",
+    "standard": "ACC-263.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field_ Label not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40710",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Combo-box_ Incorrect tutor message is announced.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40711",
+    "standard": "ACC-273.1",
+    "title": "(Level A)_Customer Data Cloud_ Combo-box_ Country code dropdown flickers and loses focus.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40712",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field_ Search field does not have magnifier icon and placeholder text is also not meaningful.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40713",
+    "standard": "ACC-271.1",
+    "title": "(Level AA)_Customer Data Cloud_ Input field_ No clear focus is provided for the UI.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40714",
+    "standard": "ACC-261.6",
+    "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, on focus text does not meet the contrast ratio of 3:1.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40715",
+    "standard": "ACC-261.1",
+    "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, text does not meet the contrast ratio of 4.5:1.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40716",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ List-items_ List-item is announced twice.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40717",
+    "standard": "ACC-253.3",
+    "title": "(Level AA)_Customer Data Cloud_ Radio button _ Group label is not provided.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40718",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field_ Placeholder info is not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40719",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Link_ Incorrect info is not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40720",
+    "standard": "ACC-253.1",
+    "title": "(Level AA) _Customer Data Cloud_ Combo-box, Input field _ Country selector search field lacks clear labelling.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40721",
+    "standard": "ACC-261.6",
+    "title": "(Level AA) _Customer Data Cloud_ List-item _ On focus the list-item does not meet the contrast ratio of 3:1.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40722",
+    "standard": "ACC-283.4",
+    "title": "(Level AA)_Customer Data Cloud_ Text_ On applying text spacing settings.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40723",
+    "standard": "ACC-263.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field _ Group label not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40724",
+    "standard": "ACC-263.1",
+    "title": "(Level A)_Customer Data Cloud_ Input field _ Descriptive text is not associated.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40725",
+    "standard": "ACC-263.1",
+    "title": "(Level A)_Customer Data Cloud_ Button _ Region name not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40726",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Button _ There is no text alt for button.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40727",
+    "standard": "ACC-271.1",
+    "title": "(Level AA)_Customer Data Cloud_ Button _ Focus gets overlap with the button.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40728",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Button _ Button name announced is not meaningful.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40729",
+    "standard": "ACC-283.1",
+    "title": "(Level AA) _Customer Data Cloud_ Combo-box, Input field _ Misaligned on text spacing.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40730",
+    "standard": "ACC-260.2",
+    "title": "(Level A)_Customer Data Cloud_ Text_ Visually the text got truncated.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40731",
+    "standard": "ACC-271.1",
+    "title": "(Level AA)_Customer Data Cloud_ Button_ Focus is not visible for the buttons.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40732",
+    "standard": "ACC-271.1",
+    "title": "(Level AA) _Customer Data Cloud_ Button _ Focus is not clear.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40733",
+    "standard": "ACC-282.1",
+    "title": "(Level AA) _Customer Data Cloud_ Text _ Text is truncated at a width equivalent to 320 CSS pixels.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40734",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _Customer Data Cloud_ Button _ Tooltip info not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40735",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _Customer Data Cloud_ Button _ On accessing list-item it is read as dash dash which is not meaningful.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40736",
+    "standard": "ACC-264.1",
+    "title": "(Level A) _Customer Data Cloud_ Input field _ Error message not read by screen-reader.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40737",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ List-item_ List count is not read by screen-reader.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40738",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Profile_ No meaningful text alternative.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40739",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Button_ No text alternative is provided.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40740",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Graphic_ Additional info is read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40741",
+    "standard": "ACC-253.4",
+    "title": "(Level A)_Customer Data Cloud_ Combo-box_ Visually not indicated as required.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40742",
+    "standard": "ACC-255.1",
+    "title": "(Level A)_Customer Data Cloud_ Button_ No text alternative is provided.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40743",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Text_ Incorrectly announce as list-item",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40744",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Text_ Incorrect UI type is read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40745",
+    "standard": "ACC-264.1",
+    "title": "(Level A)_Customer Data Cloud_ Dialog_ UI type is not read.",
+    "status": "To Do"
+  },
+  {
+    "issue_number": "CXCDC-40746",
     "standard": "ACC-275.1",
-    "title": "(Level A) [TFA-PhoneWidget]Customer Data Cloud_ Input-field _Location of the element with the error is not indicated.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34408",
-    "standard": "ACC-272.1",
-    "title": "(Level A) _ Customer Data Cloud_ Button _ No correct Tab order.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34411",
-    "standard": "ACC-253.1",
-    "title": "(Level AA)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box, Input field _ No Label Provided for the UIs.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34412",
-    "standard": "ACC-253.4",
-    "title": "(Level AA) [TFA_PhoneWidget]_ Customer Data Cloud_ Combo-box, Input field _ Read as required but visually not indicated.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34413",
-    "standard": "ACC-263.1",
-    "title": "(Level A)[TFA-PhoneWidget]Customer Data Cloud_ Combo-box _ Group label not read.",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34422",
-    "standard": "ACC-253.4",
-    "title": "(Level A) _ Customer Data Cloud_ Input field _ Read as required but visually not indicated.",
-    "status": "Cancelled"
-  },
-  {
-    "issue_number": "CXCDC-34910",
-    "standard": "",
-    "title": "default registration login -> 'forgot password - email sent' screen : wcag generic issue",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-34918",
-    "standard": "",
-    "title": "default registration login -> gigya-mobile-forgot-password-verification-screen'",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-37273",
-    "standard": "",
-    "title": "Align bugs into sprints",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-37703",
-    "standard": "",
-    "title": "Integrate the new phone widget in LoginIDWidget and TFAWidget",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-37785",
-    "standard": "",
-    "title": "WCAG Focus first element on widgets",
-    "status": "Done"
-  },
-  {
-    "issue_number": "CXCDC-39771",
-    "standard": "",
-    "title": "Design New TFA",
+    "title": "(Level A)_Customer Data Cloud_ Dialog_ Location of the error is not detected.",
     "status": "To Do"
   }
 ]
