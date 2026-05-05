@@ -30,4 +30,6 @@ Fetch all issues from a Jira epic and write them to a JSON file. Run this **once
 
 4. **Write the result** as a JSON array to `public/<OUTPUT_FILE>` (default: `public/jiraIssues.json`).
 
-5. **Report** a short summary: total issues written, how many had a standard, how many had `standard: "N/A"`.
+5. **Write the epic key** to `public/config.json` as `{ "epicKey": "<EPIC_KEY>" }`.
+
+6. **Report** a short summary: total issues written, how many had a standard, how many had `standard: "N/A"`.

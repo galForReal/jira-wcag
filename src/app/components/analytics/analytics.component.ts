@@ -9,10 +9,11 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSortModule, MatSort } from '@angular/material/sort';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartType } from 'chart.js';
-import { WcagIssue, StandardStats } from '../../models/jira.models';
+import { WcagIssue, StandardStats, AppConfig } from '../../models/jira.models';
 
 @Component({
   selector: 'app-analytics',
@@ -27,6 +28,7 @@ import { WcagIssue, StandardStats } from '../../models/jira.models';
     MatIconModule,
     MatProgressBarModule,
     MatButtonModule,
+    MatButtonToggleModule,
     MatSortModule,
     BaseChartDirective
   ],
@@ -40,6 +42,14 @@ export class AnalyticsComponent implements OnInit {
   selectedStatusFilter: string = 'all';
   dataSource = new MatTableDataSource<WcagIssue>([]);
   consolidateStandards = false;
+  epicKey = '';
+  viewMode: 'full' | 'epic' = 'full';
+
+  get activeIssues(): WcagIssue[] {
+    return this.viewMode === 'epic'
+      ? this.issues.filter(i => i.epic === this.epicKey)
+      : this.issues;
+  }
 
   // Overall statistics
   totalIssues = 0;
@@ -102,7 +112,7 @@ export class AnalyticsComponent implements OnInit {
     ]
   };
 
-  displayedColumns: string[] = ['issue_number', 'standard', 'title', 'status', 'link'];
+  displayedColumns: string[] = ['issue_number', 'standard', 'title', 'status', 'epic', 'effort'];
 
   @ViewChild(MatSort) sort!: MatSort;
 
@@ -117,15 +127,23 @@ export class AnalyticsComponent implements OnInit {
   }
 
   loadIssues() {
-    this.http.get<WcagIssue[]>('jiraIssues.json').subscribe({
-      next: (data) => {
-        this.issues = data;
-        this.analyzeData();
-        this.dataSource.data = this.issues;
-        this.updateCharts();
+    this.http.get<AppConfig>('config.json').subscribe({
+      next: (config) => {
+        this.epicKey = config.epicKey;
+        this.http.get<WcagIssue[]>('jiraIssues.json').subscribe({
+          next: (data) => {
+            this.issues = data;
+            this.analyzeData();
+            this.dataSource.data = this.activeIssues;
+            this.updateCharts();
+          },
+          error: (error) => {
+            console.error('Error loading issues:', error);
+          }
+        });
       },
       error: (error) => {
-        console.error('Error loading issues:', error);
+        console.error('Error loading config:', error);
       }
     });
   }
@@ -134,7 +152,7 @@ export class AnalyticsComponent implements OnInit {
     const standardsMap = new Map<string, WcagIssue[]>();
 
     // Group issues by standard (optionally consolidating decimals)
-    this.issues.forEach(issue => {
+    this.activeIssues.forEach(issue => {
       const groupKey = this.consolidateStandards
         ? issue.standard.replace(/\.\d+$/, '')  // ACC-253.1 → ACC-253
         : issue.standard;
@@ -169,9 +187,9 @@ export class AnalyticsComponent implements OnInit {
     this.standardsStats.sort((a, b) => a.standard.localeCompare(b.standard));
 
     // Calculate overall statistics
-    this.totalIssues = this.issues.length;
-    this.completedIssues = this.issues.filter(i => i.status === 'Done' || i.status === 'Cancelled').length;
-    this.inProgressIssues = this.issues.filter(i => i.status === 'In Progress' || i.status === 'Development').length;
+    this.totalIssues = this.activeIssues.length;
+    this.completedIssues = this.activeIssues.filter(i => i.status === 'Done' || i.status === 'Cancelled').length;
+    this.inProgressIssues = this.activeIssues.filter(i => i.status === 'In Progress' || i.status === 'Development').length;
     this.overallCompletionPercentage = this.totalIssues > 0
       ? (this.completedIssues / this.totalIssues) * 100
       : 0;
@@ -180,7 +198,7 @@ export class AnalyticsComponent implements OnInit {
   updateCharts() {
     // Update Pie Chart - Status distribution
     const statusCounts: { [key: string]: number } = {};
-    this.issues.forEach(issue => {
+    this.activeIssues.forEach(issue => {
       statusCounts[issue.status] = (statusCounts[issue.status] || 0) + 1;
     });
 
@@ -218,6 +236,15 @@ export class AnalyticsComponent implements OnInit {
     };
   }
 
+  setViewMode(mode: 'full' | 'epic') {
+    this.viewMode = mode;
+    this.selectedStandard = 'all';
+    this.selectedStatusFilter = 'all';
+    this.analyzeData();
+    this.applyFilters();
+    this.updateCharts();
+  }
+
   toggleConsolidation() {
     this.consolidateStandards = !this.consolidateStandards;
     this.selectedStandard = 'all';  // Reset filter when toggling
@@ -237,7 +264,7 @@ export class AnalyticsComponent implements OnInit {
   }
 
   applyFilters() {
-    let filtered = this.issues;
+    let filtered = this.activeIssues;
 
     // Apply standard filter
     if (this.selectedStandard !== 'all') {

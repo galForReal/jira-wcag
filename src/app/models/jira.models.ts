@@ -33,12 +33,18 @@ export interface JiraSearchResponse {
   startAt: number;
 }
 
+export interface AppConfig {
+  epicKey: string;
+}
+
 // Analytics specific models
 export interface WcagIssue {
   issue_number: string;
   standard: string;
   title: string;
   status: string;
+  epic: string;
+  effort: number;
 }
 
 export interface StandardStats {

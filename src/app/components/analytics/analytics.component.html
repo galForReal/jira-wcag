@@ -1,6 +1,18 @@
 <div class="analytics-container">
   <h1>WCAG Compliance Analytics Dashboard</h1>
 
+  <!-- View Mode Toggle -->
+  <div class="view-toggle">
+    <mat-button-toggle-group [value]="viewMode" (change)="setViewMode($event.value)">
+      <mat-button-toggle value="full">
+        <mat-icon>list</mat-icon> Full View
+      </mat-button-toggle>
+      <mat-button-toggle value="epic">
+        <mat-icon>filter_alt</mat-icon> Epic View ({{ epicKey }})
+      </mat-button-toggle>
+    </mat-button-toggle-group>
+  </div>
+
   <!-- Overall Statistics Cards -->
   <div class="stats-cards">
     <mat-card class="stat-card">
@@ -189,8 +201,12 @@
       <table mat-table [dataSource]="dataSource" matSort class="full-width-table">
         <!-- Issue Number Column -->
         <ng-container matColumnDef="issue_number">
-          <th mat-header-cell *matHeaderCellDef mat-sort-header>Issue Number</th>
-          <td mat-cell *matCellDef="let issue">{{ issue.issue_number }}</td>
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Issue</th>
+          <td mat-cell *matCellDef="let issue">
+            <a [href]="getJiraLink(issue.issue_number)" target="_blank" class="issue-link">
+              {{ issue.issue_number }}
+            </a>
+          </td>
         </ng-container>
 
         <!-- Standard Column -->
@@ -217,20 +233,21 @@
           </td>
         </ng-container>
 
-        <!-- Link Column -->
-        <ng-container matColumnDef="link">
-          <th mat-header-cell *matHeaderCellDef>Jira Link</th>
+        <!-- Epic Column -->
+        <ng-container matColumnDef="epic">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Epic</th>
           <td mat-cell *matCellDef="let issue">
-            <a
-              [href]="getJiraLink(issue.issue_number)"
-              target="_blank"
-              mat-raised-button
-              color="primary"
-              class="jira-link">
-              <mat-icon>open_in_new</mat-icon>
-              View in Jira
+            <a *ngIf="issue.epic" [href]="getJiraLink(issue.epic)" target="_blank" class="issue-link">
+              {{ issue.epic }}
             </a>
+            <span *ngIf="!issue.epic">—</span>
           </td>
+        </ng-container>
+
+        <!-- Effort Column -->
+        <ng-container matColumnDef="effort">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>Effort</th>
+          <td mat-cell *matCellDef="let issue">{{ issue.effort || '—' }}</td>
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

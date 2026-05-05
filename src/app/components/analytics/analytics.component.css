@@ -6,9 +6,16 @@
 
 h1 {
   color: #1976d2;
-  margin-bottom: 30px;
+  margin-bottom: 16px;
   text-align: center;
   font-size: 2.5em;
+}
+
+/* View Toggle */
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
 }
 
 /* Statistics Cards */
@@ -279,18 +286,14 @@ h1 {
   text-overflow: ellipsis;
 }
 
-.jira-link {
-  display: flex;
-  align-items: center;
-  gap: 8px;
+.issue-link {
+  color: #1976d2;
   text-decoration: none;
   white-space: nowrap;
 }
 
-.jira-link mat-icon {
-  font-size: 18px;
-  width: 18px;
-  height: 18px;
+.issue-link:hover {
+  text-decoration: underline;
 }
 
 .subtitle {

@@ -1,0 +1,6 @@
+https://jira.tools.sap/browse/CXCDC-29918
+https://jira.tools.sap/browse/CXCDC-25215
+https://jira.tools.sap/browse/CXCDC-16327
+https://jira.tools.sap/browse/CXCDC-14111
+https://jira.tools.sap/browse/CXCDC-30276
+https://jira.tools.sap/browse/CXCDC-17936
