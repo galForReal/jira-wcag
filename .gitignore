@@ -40,3 +40,6 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# Claude Code - local MCP config (contains personal credentials and machine-specific paths)
+.mcp.json
