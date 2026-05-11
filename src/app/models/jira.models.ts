@@ -35,6 +35,7 @@ export interface JiraSearchResponse {
 
 export interface AppConfig {
   epicKey: string;
+  activeSprint: string;
 }
 
 // Analytics specific models
@@ -45,6 +46,7 @@ export interface WcagIssue {
   status: string;
   epic: string;
   effort: number;
+  sprint: string | null;
 }
 
 export interface StandardStats {
@@ -53,4 +55,21 @@ export interface StandardStats {
   statusCounts: { [key: string]: number };
   completionPercentage: number;
   issues: WcagIssue[];
+}
+
+export interface StandardProgress {
+  standard: string;
+  total: number;
+  completed: number;
+  completionPct: number;
+  statusCounts: { [key: string]: number };
+}
+
+export interface SprintProgress {
+  sprintName: string;
+  phase: 'past' | 'current' | 'future' | 'unassigned';
+  standards: StandardProgress[];
+  totalIssues: number;
+  completedIssues: number;
+  overallPct: number;
 }

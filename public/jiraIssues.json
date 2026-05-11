@@ -5,7 +5,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button _ No text alternative for non-text UI.",
     "status": "To Do",
     "epic": "CXCDC-36744",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40676",
@@ -13,7 +14,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Link _ Visible focus is provided for the non-interactive text.",
     "status": "To Do",
     "epic": "CXCDC-30276",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40677",
@@ -21,7 +23,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button _UI cannot be activated with keyboard.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0.5,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40678",
@@ -29,7 +32,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Link _ No visible focus.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40694",
@@ -37,7 +41,8 @@
     "title": "(Level AAA)_Customer Data Cloud_ Check-box_ Focus is added twice for the check-boxes.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40695",
@@ -45,7 +50,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Button, Link_ Truncated at 320.",
     "status": "To Do",
     "epic": "CXCDC-25215",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40696",
@@ -53,15 +59,17 @@
     "title": "(Level A)_Customer Data Cloud_ Input field_ Required info read twice.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40697",
     "standard": "ACC-261.1",
     "title": "(Level AA)_Customer Data Cloud_ Text_ In default theme, text does not meet the contrast ratio of 4.5:1.",
-    "status": "To Do",
+    "status": "Development",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 3"
   },
   {
     "issue_number": "CXCDC-40698",
@@ -69,7 +77,8 @@
     "title": "(Level A)_Customer Data Cloud_ Icon_ No text alternative for the icon.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40699",
@@ -77,7 +86,8 @@
     "title": "(Level AAA)_Customer Data Cloud_ Screen_ Screen is not adapting to High contrast and white theme.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40700",
@@ -85,7 +95,8 @@
     "title": "(Level A) _ Customer Data Cloud_ Input-field _required is visually indicated using a black colour asterisk (*) symbol.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.2
+    "effort": 0.2,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40701",
@@ -93,15 +104,17 @@
     "title": "(Level A)_Customer Data Cloud_ Heading_ Incorrect levels are assigned for the headings.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40702",
     "standard": "ACC-264.1",
     "title": "(Level A)_Customer Data Cloud_ List-item_ List count not read.",
-    "status": "Blocked / On hold",
+    "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40703",
@@ -109,7 +122,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Input field_ Year dropdown shows blank, unlabeled first option.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1.5
+    "effort": 1.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40704",
@@ -117,7 +131,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Check-box_ the Focus indicator becomes barely visible when the checkbox is in the 'Checked' state.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40705",
@@ -125,7 +140,8 @@
     "title": "(Level A)_Customer Data Cloud_ Combo-box_ Group label not read and additional info is read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 2
+    "effort": 2,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40706",
@@ -133,7 +149,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button _ Focus moves away.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40707",
@@ -141,7 +158,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button _ Group label and Label not read.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40708",
@@ -149,7 +167,8 @@
     "title": "(Level A)_Customer Data Cloud_ Input field_ Required info is read as star.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40709",
@@ -157,7 +176,8 @@
     "title": "(Level A)_Customer Data Cloud_ Input field_ Label not read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40710",
@@ -165,7 +185,8 @@
     "title": "(Level A)_Customer Data Cloud_ Combo-box_ Incorrect tutor message is announced.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1
+    "effort": 1,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40711",
@@ -173,7 +194,8 @@
     "title": "(Level A)_Customer Data Cloud_ Combo-box_ Country code dropdown flickers and loses focus.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40712",
@@ -181,7 +203,8 @@
     "title": "(Level A)_Customer Data Cloud_ Input field_ Search field does not have magnifier icon and placeholder text is also not meaningful.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40713",
@@ -189,7 +212,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Input field_ No clear focus is provided for the UI.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40714",
@@ -197,7 +221,8 @@
     "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, on focus text does not meet the contrast ratio of 3:1.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 3"
   },
   {
     "issue_number": "CXCDC-40715",
@@ -205,7 +230,8 @@
     "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, text does not meet the contrast ratio of 4.5:1.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 3"
   },
   {
     "issue_number": "CXCDC-40716",
@@ -213,7 +239,8 @@
     "title": "(Level A)_Customer Data Cloud_ List-items_ List-item is announced twice.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40717",
@@ -221,7 +248,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Radio button _ Group label is not provided.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40718",
@@ -229,7 +257,8 @@
     "title": "(Level A)_Customer Data Cloud_ Input field_ Placeholder info is not read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40719",
@@ -237,7 +266,8 @@
     "title": "(Level A)_Customer Data Cloud_ Link_ Incorrect info is not read.",
     "status": "To Do",
     "epic": "CXCDC-40087",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40720",
@@ -245,7 +275,8 @@
     "title": "(Level AA) _Customer Data Cloud_ Combo-box, Input field _ Country selector search field lacks clear labelling.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1
+    "effort": 1,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40721",
@@ -253,15 +284,17 @@
     "title": "(Level AA) _Customer Data Cloud_ List-item _ On focus the list-item does not meet the contrast ratio of 3:1.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 3"
   },
   {
     "issue_number": "CXCDC-40722",
     "standard": "ACC-283.4",
     "title": "(Level AA)_Customer Data Cloud_ Text_ On applying text spacing settings.",
-    "status": "Blocked / On hold",
+    "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40723",
@@ -269,7 +302,8 @@
     "title": "(Level A)_Customer Data Cloud_ Input field _ Group label not read.",
     "status": "To Do",
     "epic": "CXCDC-40087",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40724",
@@ -277,7 +311,8 @@
     "title": "(Level A)_Customer Data Cloud_ Input field _ Descriptive text is not associated.",
     "status": "To Do",
     "epic": "CXCDC-40087",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40725",
@@ -285,7 +320,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button _ Region name not read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1
+    "effort": 1,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40726",
@@ -293,7 +329,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button _ There is no text alt for button.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1
+    "effort": 1,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40727",
@@ -301,7 +338,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Button _ Focus gets overlap with the button.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40728",
@@ -309,15 +347,17 @@
     "title": "(Level A)_Customer Data Cloud_ Button _ Button name announced is not meaningful.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1
+    "effort": 1,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40729",
     "standard": "ACC-283.1",
     "title": "(Level AA) _Customer Data Cloud_ Combo-box, Input field _ Misaligned on text spacing.",
-    "status": "Blocked / On hold",
+    "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40730",
@@ -325,7 +365,8 @@
     "title": "(Level A)_Customer Data Cloud_ Text_ Visually the text got truncated.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40731",
@@ -333,7 +374,8 @@
     "title": "(Level AA)_Customer Data Cloud_ Button_ Focus is not visible for the buttons.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40732",
@@ -341,7 +383,8 @@
     "title": "(Level AA) _Customer Data Cloud_ Button _ Focus is not clear.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 6"
   },
   {
     "issue_number": "CXCDC-40733",
@@ -349,7 +392,8 @@
     "title": "(Level AA) _Customer Data Cloud_ Text _ Text is truncated at a width equivalent to 320 CSS pixels.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40734",
@@ -357,7 +401,8 @@
     "title": "(Level A) _Customer Data Cloud_ Button _ Tooltip info not read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1
+    "effort": 1,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40735",
@@ -365,7 +410,8 @@
     "title": "(Level A) _Customer Data Cloud_ Button _ On accessing list-item it is read as dash dash which is not meaningful.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40736",
@@ -373,7 +419,8 @@
     "title": "(Level A) _Customer Data Cloud_ Input field _ Error message not read by screen-reader.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40737",
@@ -381,7 +428,8 @@
     "title": "(Level A)_Customer Data Cloud_ List-item_ List count is not read by screen-reader.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40738",
@@ -389,7 +437,8 @@
     "title": "(Level A)_Customer Data Cloud_ Profile_ No meaningful text alternative.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40739",
@@ -397,7 +446,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button_ No text alternative is provided.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40740",
@@ -405,7 +455,8 @@
     "title": "(Level A)_Customer Data Cloud_ Graphic_ Additional info is read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 1,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40741",
@@ -413,7 +464,8 @@
     "title": "(Level A)_Customer Data Cloud_ Combo-box_ Visually not indicated as required.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40742",
@@ -421,7 +473,8 @@
     "title": "(Level A)_Customer Data Cloud_ Button_ No text alternative is provided.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 1.5
+    "effort": 1.5,
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40743",
@@ -429,7 +482,8 @@
     "title": "(Level A)_Customer Data Cloud_ Text_ Incorrectly announce as list-item",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40744",
@@ -437,7 +491,8 @@
     "title": "(Level A)_Customer Data Cloud_ Text_ Incorrect UI type is read.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   },
   {
     "issue_number": "CXCDC-40745",
@@ -445,7 +500,8 @@
     "title": "(Level A)_Customer Data Cloud_ Dialog_ UI type is not read.",
     "status": "To Do",
     "epic": "CXCDC-36567",
-    "effort": 0.5
+    "effort": 0.5,
+    "sprint": "Q2-26 Sprint 5"
   },
   {
     "issue_number": "CXCDC-40746",
@@ -453,6 +509,7 @@
     "title": "(Level A)_Customer Data Cloud_ Dialog_ Location of the error is not detected.",
     "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
-    "effort": 0
+    "effort": 0,
+    "sprint": null
   }
 ]

@@ -10,6 +10,14 @@ Fetch all issues from a Jira epic and write them to a JSON file. Run this **once
 
 ## Steps
 
+0. **Safety check — confirm before proceeding**
+   Display this warning to the user and wait for explicit confirmation before doing anything else:
+
+   > ⚠️ **Warning:** This will overwrite `public/<OUTPUT_FILE>` and `public/config.json` with fresh data from Jira. Any manual edits to those files will be lost.
+   > **Are you sure you want to proceed?**
+
+   Only continue if the user confirms (e.g. "yes", "proceed", "go ahead"). If they decline, stop immediately.
+
 1. **Authenticate** with the SAP Jira MCP if needed (call `sap_authenticate` with `entry_url: "https://jira.tools.sap/"` and `store_path: "~/.sap-mcp/cookies/cdc-jira"` if you get a `SAP_AUTH_REQUIRED` error).
 
 2. **Fetch all issues in the epic** using `search_issues` with JQL:
