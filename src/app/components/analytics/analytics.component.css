@@ -312,6 +312,29 @@ h1 {
   font-size: 0.9em;
 }
 
+/* Unsupported Standards */
+.standard-cell {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.unsupported-icon {
+  color: #ff9800;
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  cursor: help;
+}
+
+.unsupported-row {
+  background-color: #fff8e1 !important;
+}
+
+.unsupported-row:hover {
+  background-color: #ffecb3 !important;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .stats-cards {

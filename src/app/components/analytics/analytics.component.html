@@ -179,6 +179,11 @@
             (click)="filterByStatus('uncompleted')">
             Uncompleted
           </button>
+          <button mat-raised-button
+            [color]="selectedStatusFilter === 'unsupported' ? 'warn' : 'basic'"
+            (click)="filterByStatus('unsupported')">
+            Unsupported
+          </button>
         </div>
       </div>
       <div class="filter-info">
@@ -213,7 +218,14 @@
         <ng-container matColumnDef="standard">
           <th mat-header-cell *matHeaderCellDef mat-sort-header>Standard</th>
           <td mat-cell *matCellDef="let issue">
-            <mat-chip color="accent">{{ issue.standard }}</mat-chip>
+            <div class="standard-cell">
+              <mat-chip color="accent">{{ issue.standard }}</mat-chip>
+              <mat-icon *ngIf="isUnsupported(issue.standard)"
+                class="unsupported-icon"
+                [matTooltip]="'Not supported: ' + getUnsupportedReason(issue.standard)">
+                warning
+              </mat-icon>
+            </div>
           </td>
         </ng-container>
 
@@ -251,7 +263,8 @@
         </ng-container>
 
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+          [class.unsupported-row]="isUnsupported(row.standard)"></tr>
       </table>
     </mat-card-content>
   </mat-card>

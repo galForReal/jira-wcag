@@ -33,9 +33,15 @@ export interface JiraSearchResponse {
   startAt: number;
 }
 
+export interface UnsupportedStandard {
+  standard: string;
+  reason: string;
+}
+
 export interface AppConfig {
   epicKey: string;
   activeSprint: string;
+  unsupportedStandards?: UnsupportedStandard[];
 }
 
 // Analytics specific models

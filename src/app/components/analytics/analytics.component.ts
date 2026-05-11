@@ -11,9 +11,10 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatSortModule, MatSort } from '@angular/material/sort';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartConfiguration, ChartType } from 'chart.js';
-import { WcagIssue, StandardStats, AppConfig } from '../../models/jira.models';
+import { WcagIssue, StandardStats, AppConfig, UnsupportedStandard } from '../../models/jira.models';
 
 @Component({
   selector: 'app-analytics',
@@ -30,6 +31,7 @@ import { WcagIssue, StandardStats, AppConfig } from '../../models/jira.models';
     MatButtonModule,
     MatButtonToggleModule,
     MatSortModule,
+    MatTooltipModule,
     BaseChartDirective
   ],
   templateUrl: './analytics.component.html',
@@ -44,6 +46,7 @@ export class AnalyticsComponent implements OnInit {
   consolidateStandards = false;
   epicKey = '';
   viewMode: 'full' | 'epic' = 'full';
+  unsupportedStandards: UnsupportedStandard[] = [];
 
   get activeIssues(): WcagIssue[] {
     return this.viewMode === 'epic'
@@ -130,6 +133,7 @@ export class AnalyticsComponent implements OnInit {
     this.http.get<AppConfig>('config.json').subscribe({
       next: (config) => {
         this.epicKey = config.epicKey;
+        this.unsupportedStandards = config.unsupportedStandards || [];
         this.http.get<WcagIssue[]>('jiraIssues.json').subscribe({
           next: (data) => {
             this.issues = data;
@@ -287,9 +291,30 @@ export class AnalyticsComponent implements OnInit {
       filtered = filtered.filter(issue =>
         issue.status !== 'Done' && issue.status !== 'Cancelled'
       );
+    } else if (this.selectedStatusFilter === 'unsupported') {
+      filtered = filtered.filter(issue => this.isUnsupported(issue.standard));
     }
 
     this.dataSource.data = filtered;
+  }
+
+  isUnsupported(standard: string): boolean {
+    const base = standard.replace(/\.\d+$/, '').toLowerCase();
+    const exact = standard.toLowerCase();
+    return this.unsupportedStandards.some(u => {
+      const uStd = u.standard.toLowerCase();
+      return exact === uStd || base === uStd;
+    });
+  }
+
+  getUnsupportedReason(standard: string): string {
+    const base = standard.replace(/\.\d+$/, '').toLowerCase();
+    const exact = standard.toLowerCase();
+    const match = this.unsupportedStandards.find(u => {
+      const uStd = u.standard.toLowerCase();
+      return exact === uStd || base === uStd;
+    });
+    return match ? match.reason : '';
   }
 
   getJiraLink(issueNumber: string): string {
