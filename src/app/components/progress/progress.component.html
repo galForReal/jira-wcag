@@ -1,0 +1,57 @@
+<div class="progress-container">
+  <h1>Sprint Progress</h1>
+  <p class="subtitle">Epic: {{ epicKey }} &nbsp;|&nbsp; Active Sprint: {{ activeSprint || 'None' }}</p>
+
+  <div *ngFor="let sprint of sprintLanes" class="sprint-lane" [ngClass]="sprint.phase">
+
+    <!-- Sprint Header -->
+    <div class="sprint-header">
+      <div class="sprint-header-left">
+        <mat-icon class="phase-icon">{{ sprint.phase === 'past' ? 'check_circle' : sprint.phase === 'current' ? 'play_circle' : sprint.phase === 'future' ? 'schedule' : 'help_outline' }}</mat-icon>
+        <span class="sprint-name">{{ sprint.sprintName }}</span>
+        <span class="phase-badge" [style.background-color]="getPhaseColor(sprint.phase)">
+          {{ getPhaseBadge(sprint.phase) }}
+        </span>
+      </div>
+      <div class="sprint-header-right">
+        <span class="sprint-summary">{{ sprint.completedIssues }}/{{ sprint.totalIssues }} issues &nbsp; {{ sprint.overallPct.toFixed(0) }}%</span>
+      </div>
+    </div>
+
+    <mat-progress-bar
+      mode="determinate"
+      [value]="sprint.overallPct"
+      [style.--progress-color]="getPhaseColor(sprint.phase)"
+      class="sprint-bar">
+    </mat-progress-bar>
+
+    <!-- Standards Row -->
+    <div class="standards-row">
+      <div *ngFor="let std of sprint.standards" class="standard-card">
+        <div class="std-label">{{ std.standard }}</div>
+        <mat-progress-bar
+          mode="determinate"
+          [value]="std.completionPct"
+          [style.--progress-color]="getPhaseColor(sprint.phase)"
+          class="std-bar">
+        </mat-progress-bar>
+        <div class="std-footer">
+          <span class="std-pct">{{ std.completionPct.toFixed(0) }}%</span>
+          <span class="std-count">{{ std.completed }}/{{ std.total }}</span>
+        </div>
+        <div class="status-chips">
+          <span *ngFor="let s of std.statusCounts | keyvalue" class="mini-chip"
+            [style.background-color]="getStatusColor(s.key)">
+            {{ s.key }}: {{ s.value }}
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div *ngIf="sprintLanes.length === 0" class="empty-state">
+    <mat-icon>info</mat-icon>
+    <p>No sprint data available. Run <code>/sync-issue-statuses</code> to populate sprint assignments.</p>
+  </div>
+</div>
