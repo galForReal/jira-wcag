@@ -297,6 +297,8 @@ export class AnalyticsComponent implements OnInit {
       );
     } else if (this.selectedStatusFilter === 'unsupported') {
       filtered = filtered.filter(issue => this.isUnsupported(issue.standard));
+    } else if (this.selectedStatusFilter === 'out-of-scope') {
+      filtered = filtered.filter(issue => issue.epic !== this.epicKey);
     }
 
     this.dataSource.data = filtered;

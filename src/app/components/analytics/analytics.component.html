@@ -185,6 +185,11 @@
             (click)="filterByStatus('unsupported')">
             Unsupported
           </button>
+          <button mat-raised-button
+            [color]="selectedStatusFilter === 'out-of-scope' ? 'warn' : 'basic'"
+            (click)="filterByStatus('out-of-scope')">
+            Out of Scope
+          </button>
         </div>
       </div>
       <div class="filter-info">
