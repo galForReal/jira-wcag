@@ -228,7 +228,7 @@
     "issue_number": "CXCDC-40715",
     "standard": "ACC-261.1",
     "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, text does not meet the contrast ratio of 4.5:1.",
-    "status": "To Do",
+    "status": "Development",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 3"
@@ -282,7 +282,7 @@
     "issue_number": "CXCDC-40721",
     "standard": "ACC-261.6",
     "title": "(Level AA) _Customer Data Cloud_ List-item _ On focus the list-item does not meet the contrast ratio of 3:1.",
-    "status": "To Do",
+    "status": "Development",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 3"

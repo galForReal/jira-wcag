@@ -59,16 +59,14 @@
         </mat-progress-bar>
       </mat-card-content>
     </mat-card>
-  </div>
 
-  <!-- Charts Section -->
-  <div class="charts-section">
-    <mat-card class="chart-card">
+    <mat-card class="stat-card pie-stat-card">
       <mat-card-header>
+        <mat-icon>donut_large</mat-icon>
         <mat-card-title>Status Distribution</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <div class="chart-container">
+        <div class="pie-container">
           <canvas baseChart
             [data]="pieChartData"
             [type]="pieChartType"
@@ -77,13 +75,16 @@
         </div>
       </mat-card-content>
     </mat-card>
+  </div>
 
-    <mat-card class="chart-card">
+  <!-- Charts Section -->
+  <div class="charts-section">
+    <mat-card class="chart-card bar-card">
       <mat-card-header>
-        <mat-card-title>Top 10 Standards by Issue Count</mat-card-title>
+        <mat-card-title>All Standards by Issue Count</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <div class="chart-container">
+        <div class="chart-container bar-container">
           <canvas baseChart
             [data]="barChartData"
             [type]="barChartType"

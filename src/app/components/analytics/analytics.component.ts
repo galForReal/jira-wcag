@@ -63,17 +63,14 @@ export class AnalyticsComponent implements OnInit {
   // Chart configurations
   public pieChartOptions: ChartConfiguration['options'] = {
     responsive: true,
-    maintainAspectRatio: true,
-    aspectRatio: 1.5,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'right',
         labels: {
-          boxWidth: 15,
-          padding: 10,
-          font: {
-            size: 11
-          }
+          boxWidth: 10,
+          padding: 6,
+          font: { size: 9 }
         }
       },
     }
@@ -94,9 +91,17 @@ export class AnalyticsComponent implements OnInit {
 
   public barChartOptions: ChartConfiguration['options'] = {
     responsive: true,
+    maintainAspectRatio: false,
     scales: {
       y: {
         beginAtZero: true
+      },
+      x: {
+        ticks: {
+          maxRotation: 45,
+          minRotation: 45,
+          font: { size: 10 }
+        }
       }
     },
     plugins: {
@@ -221,18 +226,17 @@ export class AnalyticsComponent implements OnInit {
       }]
     };
 
-    // Update Bar Chart - Standards distribution
-    const topStandards = this.standardsStats.slice(0, 10); // Top 10 standards
+    // Update Bar Chart - all standards
     this.barChartData = {
-      labels: topStandards.map(s => s.standard),
+      labels: this.standardsStats.map(s => s.standard),
       datasets: [
         {
-          data: topStandards.map(s => s.totalItems),
+          data: this.standardsStats.map(s => s.totalItems),
           label: 'Total Issues',
           backgroundColor: '#2196f3'
         },
         {
-          data: topStandards.map(s => (s.statusCounts['Done'] || 0) + (s.statusCounts['Cancelled'] || 0)),
+          data: this.standardsStats.map(s => (s.statusCounts['Done'] || 0) + (s.statusCounts['Cancelled'] || 0)),
           label: 'Completed',
           backgroundColor: '#4caf50'
         }
