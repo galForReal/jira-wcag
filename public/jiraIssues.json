@@ -30,7 +30,7 @@
     "issue_number": "CXCDC-40678",
     "standard": "ACC-271.1",
     "title": "(Level AA)_Customer Data Cloud_ Link _ No visible focus.",
-    "status": "Blocked / On hold",
+    "status": "Done",
     "epic": "CXCDC-36567",
     "effort": 0,
     "sprint": null
@@ -66,10 +66,10 @@
     "issue_number": "CXCDC-40697",
     "standard": "ACC-261.1",
     "title": "(Level AA)_Customer Data Cloud_ Text_ In default theme, text does not meet the contrast ratio of 4.5:1.",
-    "status": "Development",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 0.5,
-    "sprint": "Q2-26 Sprint 3"
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40698",
@@ -84,7 +84,7 @@
     "issue_number": "CXCDC-40699",
     "standard": "ACC-262.4",
     "title": "(Level AAA)_Customer Data Cloud_ Screen_ Screen is not adapting to High contrast and white theme.",
-    "status": "To Do",
+    "status": "Cancelled",
     "epic": "CXCDC-36567",
     "effort": 0,
     "sprint": null
@@ -120,7 +120,7 @@
     "issue_number": "CXCDC-40703",
     "standard": "ACC-253.1",
     "title": "(Level AA)_Customer Data Cloud_ Input field_ Year dropdown shows blank, unlabeled first option.",
-    "status": "To Do",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 1.5,
     "sprint": "Q2-26 Sprint 4"
@@ -147,7 +147,7 @@
     "issue_number": "CXCDC-40706",
     "standard": "ACC-273.2",
     "title": "(Level A)_Customer Data Cloud_ Button _ Focus moves away.",
-    "status": "To Do",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 4"
@@ -192,7 +192,7 @@
     "issue_number": "CXCDC-40711",
     "standard": "ACC-273.1",
     "title": "(Level A)_Customer Data Cloud_ Combo-box_ Country code dropdown flickers and loses focus.",
-    "status": "To Do",
+    "status": "Development",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 4"
@@ -201,7 +201,7 @@
     "issue_number": "CXCDC-40712",
     "standard": "ACC-255.1",
     "title": "(Level A)_Customer Data Cloud_ Input field_ Search field does not have magnifier icon and placeholder text is also not meaningful.",
-    "status": "To Do",
+    "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 4"
@@ -219,19 +219,19 @@
     "issue_number": "CXCDC-40714",
     "standard": "ACC-261.6",
     "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, on focus text does not meet the contrast ratio of 3:1.",
-    "status": "To Do",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 0.5,
-    "sprint": "Q2-26 Sprint 3"
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40715",
     "standard": "ACC-261.1",
     "title": "(Level AA)_Customer Data Cloud_ List-item_ In default theme, text does not meet the contrast ratio of 4.5:1.",
-    "status": "Development",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 0.5,
-    "sprint": "Q2-26 Sprint 3"
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40716",
@@ -246,7 +246,7 @@
     "issue_number": "CXCDC-40717",
     "standard": "ACC-253.3",
     "title": "(Level AA)_Customer Data Cloud_ Radio button _ Group label is not provided.",
-    "status": "To Do",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 4"
@@ -273,7 +273,7 @@
     "issue_number": "CXCDC-40720",
     "standard": "ACC-253.1",
     "title": "(Level AA) _Customer Data Cloud_ Combo-box, Input field _ Country selector search field lacks clear labelling.",
-    "status": "To Do",
+    "status": "Done",
     "epic": "CXCDC-36567",
     "effort": 1,
     "sprint": "Q2-26 Sprint 4"
@@ -282,16 +282,16 @@
     "issue_number": "CXCDC-40721",
     "standard": "ACC-261.6",
     "title": "(Level AA) _Customer Data Cloud_ List-item _ On focus the list-item does not meet the contrast ratio of 3:1.",
-    "status": "Development",
+    "status": "PENDING ROLLOUT",
     "epic": "CXCDC-36567",
     "effort": 0.5,
-    "sprint": "Q2-26 Sprint 3"
+    "sprint": "Q2-26 Sprint 4"
   },
   {
     "issue_number": "CXCDC-40722",
     "standard": "ACC-283.4",
     "title": "(Level AA)_Customer Data Cloud_ Text_ On applying text spacing settings.",
-    "status": "To Do",
+    "status": "Cancelled",
     "epic": "CXCDC-36567",
     "effort": 0,
     "sprint": null
@@ -327,7 +327,7 @@
     "issue_number": "CXCDC-40726",
     "standard": "ACC-255.1",
     "title": "(Level A)_Customer Data Cloud_ Button _ There is no text alt for button.",
-    "status": "To Do",
+    "status": "Blocked / On hold",
     "epic": "CXCDC-36567",
     "effort": 1,
     "sprint": "Q2-26 Sprint 4"
@@ -354,7 +354,7 @@
     "issue_number": "CXCDC-40729",
     "standard": "ACC-283.1",
     "title": "(Level AA) _Customer Data Cloud_ Combo-box, Input field _ Misaligned on text spacing.",
-    "status": "To Do",
+    "status": "Cancelled",
     "epic": "CXCDC-36567",
     "effort": 0,
     "sprint": null
@@ -426,7 +426,7 @@
     "issue_number": "CXCDC-40737",
     "standard": "ACC-264.1",
     "title": "(Level A)_Customer Data Cloud_ List-item_ List count is not read by screen-reader.",
-    "status": "To Do",
+    "status": "Cancelled",
     "epic": "CXCDC-36567",
     "effort": 0,
     "sprint": null
@@ -435,7 +435,7 @@
     "issue_number": "CXCDC-40738",
     "standard": "ACC-255.1",
     "title": "(Level A)_Customer Data Cloud_ Profile_ No meaningful text alternative.",
-    "status": "To Do",
+    "status": "Development",
     "epic": "CXCDC-36567",
     "effort": 0.5,
     "sprint": "Q2-26 Sprint 4"
@@ -471,7 +471,7 @@
     "issue_number": "CXCDC-40742",
     "standard": "ACC-255.1",
     "title": "(Level A)_Customer Data Cloud_ Button_ No text alternative is provided.",
-    "status": "To Do",
+    "status": "Done",
     "epic": "CXCDC-36567",
     "effort": 1.5,
     "sprint": "Q2-26 Sprint 4"

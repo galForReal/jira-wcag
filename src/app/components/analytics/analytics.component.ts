@@ -198,7 +198,7 @@ export class AnalyticsComponent implements OnInit {
     // Calculate overall statistics
     this.totalIssues = this.activeIssues.length;
     this.completedIssues = this.activeIssues.filter(i => i.status === 'Done' || i.status === 'Cancelled').length;
-    this.inProgressIssues = this.activeIssues.filter(i => i.status === 'In Progress' || i.status === 'Development').length;
+    this.inProgressIssues = this.activeIssues.filter(i => i.status === 'In Progress' || i.status === 'Development' || i.status === 'PENDING ROLLOUT').length;
     this.overallCompletionPercentage = this.totalIssues > 0
       ? (this.completedIssues / this.totalIssues) * 100
       : 0;

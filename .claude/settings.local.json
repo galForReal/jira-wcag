@@ -17,7 +17,8 @@
       "Bash(timeout 15 npx -y \"git+https://github.tools.sap/sfsfmcp/sap-auth-mcp.git\")",
       "Bash(echo \"EXIT:$?\")",
       "mcp__cdc-jira__get_issue",
-      "mcp__cdc-jira__search_issues"
+      "mcp__cdc-jira__search_issues",
+      "mcp__sap-auth__sap_authenticate"
     ],
     "deny": [],
     "ask": []
