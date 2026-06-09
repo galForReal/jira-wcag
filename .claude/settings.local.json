@@ -18,7 +18,8 @@
       "Bash(echo \"EXIT:$?\")",
       "mcp__cdc-jira__get_issue",
       "mcp__cdc-jira__search_issues",
-      "mcp__sap-auth__sap_authenticate"
+      "mcp__sap-auth__sap_authenticate",
+      "mcp__cdc-jira__list_sprints"
     ],
     "deny": [],
     "ask": []
